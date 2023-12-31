@@ -15,6 +15,7 @@ val logbackVersion = "1.2.11"
 val cirisVersion = "3.0.0"
 val nettyHTTP2CodecVersion = "4.1.85.Final"//version should be consistent with other netty packages coming from http4s
 val javaxXmlVersion = "2.3.1"
+val DoobieVersion = "1.0.0-RC1"
 
 
 
@@ -31,5 +32,8 @@ libraryDependencies ++= Seq(
   "io.netty" % "netty-codec-http2" % nettyHTTP2CodecVersion,
   "org.typelevel" %% "log4cats-slf4j" % log4catsVersion,
   "ch.qos.logback" % "logback-classic" % logbackVersion,
-  "javax.xml.bind" % "jaxb-api" % javaxXmlVersion
+  "javax.xml.bind" % "jaxb-api" % javaxXmlVersion,
+  "org.tpolecat" %% "doobie-core" % DoobieVersion,
+  "org.tpolecat" %% "doobie-postgres" % DoobieVersion,
+  "org.tpolecat" %% "doobie-hikari" % DoobieVersion,
 )
